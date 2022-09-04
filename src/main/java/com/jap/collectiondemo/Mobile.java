@@ -10,12 +10,23 @@ public class Mobile {
     private String storageSpace;
     private int cameraPixels;
 
-    //create getter and setter for all the above attributes
-    public void setBrandName(String brandName){
+    public Mobile(String brandName, String modelName, double cost, String screenSize, String batteryLife, String storageSpace, int cameraPixels) {
         this.brandName = brandName;
+        this.modelName = modelName;
+        this.cost = cost;
+        this.screenSize = screenSize;
+        this.batteryLife = batteryLife;
+        this.storageSpace = storageSpace;
+        this.cameraPixels = cameraPixels;
     }
-    public String getBrandName(){
+
+    public String getBrandName() {
         return brandName;
+    }
+
+    //create getter and setter for all the above attributes
+    public void setBrandName(String brandName) {
+        this.brandName = brandName;
     }
 
     public String getModelName() {
@@ -61,19 +72,9 @@ public class Mobile {
     public int getCameraPixels() {
         return cameraPixels;
     }
-
-    public void setCameraPixels(int cameraPixels) {
-        this.cameraPixels = cameraPixels;
-    }
     //create parameterized constructor
 
-    public Mobile(String brandName, String modelName, double cost, String screenSize, String batteryLife, String storageSpace, int cameraPixels) {
-        this.brandName = brandName;
-        this.modelName = modelName;
-        this.cost = cost;
-        this.screenSize = screenSize;
-        this.batteryLife = batteryLife;
-        this.storageSpace = storageSpace;
+    public void setCameraPixels(int cameraPixels) {
         this.cameraPixels = cameraPixels;
     }
 
@@ -81,14 +82,6 @@ public class Mobile {
 
     @Override
     public String toString() {
-        return "Mobile{" +
-                "brandName='" + brandName + '\'' +
-                ", modelName='" + modelName + '\'' +
-                ", cost=" + cost +
-                ", screenSize='" + screenSize + '\'' +
-                ", batteryLife='" + batteryLife + '\'' +
-                ", storageSpace='" + storageSpace + '\'' +
-                ", cameraPixels=" + cameraPixels +
-                '}';
+        return "Mobile{" + "brandName='" + brandName + '\'' + ", modelName='" + modelName + '\'' + ", cost=" + cost + ", screenSize='" + screenSize + '\'' + ", batteryLife='" + batteryLife + '\'' + ", storageSpace='" + storageSpace + '\'' + ", cameraPixels=" + cameraPixels + '}';
     }
 }
